@@ -1,24 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { genPassphrase } from "lib/gen-passphrase.util";
+
+import "./App.css";
 
 function App() {
+  const [length, setLength] = React.useState(6);
+  const [generatedPassphrase, setGeneratedPassphrase] = React.useState(
+    genPassphrase(length)
+  );
+
+  React.useEffect(() => {
+    setGeneratedPassphrase(genPassphrase(length));
+  }, [length]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="app__container">
+        <div>
+          <p>Your generated passphrase:</p>
+          <p>
+            <code>{generatedPassphrase}</code>
+          </p>
+          <div>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(generatedPassphrase);
+              }}
+            >
+              Copy
+            </button>
+            <button
+              className="app__button--right"
+              onClick={() => {
+                setGeneratedPassphrase(genPassphrase(length));
+              }}
+            >
+              Re-generate
+            </button>
+          </div>
+          <label>Number of words: </label>
+          <input
+            type="number"
+            value={length}
+            onChange={(e) => {
+              setLength(Number(e.target.value));
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 }

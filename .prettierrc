@@ -1,0 +1,8 @@
+{
+  "importOrder": [
+    "^components/(.*)$",
+    "^lib/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true
+}
