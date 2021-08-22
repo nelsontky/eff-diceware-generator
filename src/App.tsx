@@ -5,7 +5,7 @@ import { genPassphrase } from "lib/gen-passphrase.util";
 import "./App.css";
 
 function App() {
-  const [length, setLength] = React.useState(6);
+  const [length, setLength] = React.useState(4);
   const [generatedPassphrase, setGeneratedPassphrase] = React.useState(
     genPassphrase(length)
   );
