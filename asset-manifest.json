@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/eff-diceware-generator/static/css/main.4c78b02e.chunk.css",
-    "main.js": "/eff-diceware-generator/static/js/main.12ae465c.chunk.js",
-    "main.js.map": "/eff-diceware-generator/static/js/main.12ae465c.chunk.js.map",
+    "main.js": "/eff-diceware-generator/static/js/main.d1d94703.chunk.js",
+    "main.js.map": "/eff-diceware-generator/static/js/main.d1d94703.chunk.js.map",
     "runtime-main.js": "/eff-diceware-generator/static/js/runtime-main.e25d1a52.js",
     "runtime-main.js.map": "/eff-diceware-generator/static/js/runtime-main.e25d1a52.js.map",
     "static/js/2.864d86b6.chunk.js": "/eff-diceware-generator/static/js/2.864d86b6.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e25d1a52.js",
     "static/js/2.864d86b6.chunk.js",
     "static/css/main.4c78b02e.chunk.css",
-    "static/js/main.12ae465c.chunk.js"
+    "static/js/main.d1d94703.chunk.js"
   ]
 }
